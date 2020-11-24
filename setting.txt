@@ -1,0 +1,15 @@
+#github xiaohui1078610347@126.com
+host owngit  #别名，随便定 后面配置地址有用
+    Hostname github.com #要连接的服务器
+    User Mr-xuyonghui #用户名
+    IdentityFile ~/.ssh/id_rsa[D[D[D[D[D[Dgithub_id_rsa  #密钥文件的地址，注意是私钥
+ 
+#gitlab xuyonghui@youcheyihou.com
+host youcheyihou#别名，随便定
+    Hostname gitlab.repos.suv163.com
+    User xuyonghui
+    IdentityFile ~/.ssh/id_rsa
+
+
+
+22222
