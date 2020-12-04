@@ -7,8 +7,9 @@ absroad=os.path.abspath("os_demo_1.py")
 print("文件的绝对路径：",absroad)
 #判断路径是否是文件夹
 print("路径是否是文件夹: ",os.path.isdir(localraod))
-print("路径是否是文件夹： ",os.path.isabs("/Users/iyourcar/python-example/learning"))
-print("路径是否是文件夹： ",os.path.isabs("Users/iyourcar/python-example/learning"))
+#isabs()有待学习
+print("路径是否是绝对路径： ",os.path.isabs("/Users/iyourcar/python-example/learning"))
+print("路径是否是绝对路径： ",os.path.isabs("Users/iyourcar/python-example/learning"))
 #判读路径下是否是文件
 print("路径是否是文件：",os.path.isfile(absroad))
 makedir = os.path.join(localraod,"newdir")
@@ -26,4 +27,4 @@ print(makedir)
 #获取当前路径下目录列表
 print(os.listdir())
 #删除空文件夹--文件夹不为空删除报错
-os.rmdir(makedir)
+# os.rmdir(makedir)
