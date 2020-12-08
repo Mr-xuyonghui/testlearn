@@ -40,6 +40,7 @@ if __name__ == '__main__':
     #     os.mkdir(report_path)
     # file_path=os.path.join(report_path,"result.txt")
     # with open(file_path,"w",encoding="utf-8")as f:
+          #初始化运行器
     #     runner=unittest.TextTestRunner(f,verbosity=2)
     #     runner.run(suite)
 
@@ -47,6 +48,7 @@ if __name__ == '__main__':
     #自动查看当前目录下的所有测试用例
     #testcases=unittest.defaultTestLoader.discover(start_dir = os.getcwd(),pattern='*.py')
     #defaultTestLoader = TestLoader()
+    #初始化加载器
     loader = unittest.TestLoader()
     testcases = loader.discover(start_dir=os.getcwd(),pattern='*.py')
     print(testcases)
