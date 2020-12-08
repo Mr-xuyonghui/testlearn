@@ -52,11 +52,13 @@ if __name__ == '__main__':
     #初始化加载器
     loader = unittest.TestLoader()
     #指定查找某个模块里面的测试用例
-    testcases = loader.loadTestsFromModule(test_skip_demo_1)
+    #testcases = loader.loadTestsFromModule(test_skip_demo_1)
     #通过名称加载测试用例，入参为字符串
     #testcases = loader.loadTestsFromName('test_skip_demo_1.Test_skip.test_login')
     #通过名称加载测试用例，入参为列表，元素为字符串
-    testcases = loader.loadTestsFromNames(['test_skip_demo_1.Test_skip.test_login','test_skip_demo_1.Test_skip.test_false','test_skip_demo_1.Test_skip.test_skip_1'])
+    #testcases = loader.loadTestsFromNames(['test_skip_demo_1.Test_skip.test_login','test_skip_demo_1.Test_skip.test_false','test_skip_demo_1.Test_skip.test_skip_1'])
+    #通过类名加载测试用例 模块名.类名
+    testcases = loader.loadTestsFromTestCase(test_skip_demo_1.Test_skip)
     #查找指定目录下的所有测试用例
     #testcases = loader.discover(start_dir=os.getcwd(),pattern='*.py')
     print(testcases)
