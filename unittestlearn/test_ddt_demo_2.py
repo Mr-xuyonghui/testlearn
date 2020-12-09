@@ -34,7 +34,7 @@ class Test_zhihuLogin(unittest.TestCase):
         #切换到密码登陆
         self.driver.find_element_by_xpath('//*[@id="root"]/div/main/div/div/div/div[1]/div/form/div[1]/div[2]').click()
         #通过name来查找元素
-        self.driver.find_element_by_name('username').send_keys(name)
+        self.driver.find_element_by_name('user name').send_keys(name)
         self.driver.find_element_by_name('password').send_keys(pwd)
         #通过path来查找
         self.driver.find_element_by_xpath('//*[@id="root"]/div/main/div/div/div/div[1]/div/form/button').click()
