@@ -25,7 +25,7 @@ class Testlogin(unittest.TestCase):
         print(exldata)
         print(type(exldata['headers']))
         res =Requestunitl()
-        #header必须是字典
+        #header必须是字典 eval()-转化为字典，ast.literal_eval()
         resdata=res._post(url=exldata['url'],data=exldata['data'],headers=ast.literal_eval(exldata['headers']))
         print(resdata.json())
         response=resdata.json()
@@ -35,3 +35,5 @@ class Testlogin(unittest.TestCase):
         self.assertEqual(response['result']['nickname'], exldata['expect_1'])
 if __name__ == '__main__':
     unittest.main()
+
+
