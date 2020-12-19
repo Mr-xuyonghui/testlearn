@@ -38,3 +38,5 @@ if __name__ == '__main__':
     print(result.headers)
     #获取响应体cookies
     print(result.cookies)
+    Log=Log().logger()
+    Log.info("rizhi")
