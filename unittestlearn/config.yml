@@ -1,0 +1,7 @@
+#请求host
+host: http:m.youchieyou.com
+level: DEBUG
+user:
+  - tom
+  - amy
+  - jack
