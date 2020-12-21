@@ -1,5 +1,5 @@
-from learning import data_for_config
-from learning.data_for_config import Test
+from unittestlearn import data_for_config
+from unittestlearn.data_for_config import Test
 import os
 import yaml
 print("通过导入py文件的配置配置，不用类")
