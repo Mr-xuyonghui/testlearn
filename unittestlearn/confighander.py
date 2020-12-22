@@ -5,7 +5,6 @@ class ConfigHander(ConfigParser):
         super().__init__()
         self.file = file
         self.read(file,encoding='utf-8')
-
     def write_key(self,section,key,value):
         self.add_section(section)
         self.set(section,key,value)
