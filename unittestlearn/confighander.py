@@ -1,22 +1,23 @@
-import os
-
-import yaml
 from configparser import ConfigParser
-
-class confighander(ConfigParser):
+import yaml
+class ConfigHander(ConfigParser):
     def __init__(self,file):
         super().__init__()
+        self.file = file
         self.read(file,encoding='utf-8')
 
-def read_yaml(file,encode='utf-8'):
-    with open(file,encoding=encode) as f:
-        return yaml.load(f.read(),Loader=yaml.FullLoader)
+    def write_key(self,section,key,value):
+        self.add_section(section)
+        self.set(section,key,value)
+        with open(self.file,'a',encoding='utf-8') as f:
+            self.write(f)
 
-if __name__ == '__main__':
-    file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.yml')
-    file_1 = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.ini')
-    config =confighander(file_1)
-    a=config.get('useraccout','name')
-    print(a)
-    yaml_data= read_yaml(file)
-    print(yaml_data['host'])
+#yaml读取和写入
+def get_yml_data(file,key):
+    with open(file,'r',encoding='utf-8') as f:
+        data = yaml.load(f,Loader=yaml.FullLoader)
+        return data[key]
+
+def write_yml_data(file,case):
+    with open(file, 'a', encoding='utf-8') as f1:
+        yaml.dump(case, f1, allow_unicode=True)
