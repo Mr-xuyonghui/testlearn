@@ -4,11 +4,11 @@ from selenium.webdriver.common.by import By
 dir =webdriver.Chrome()
 dir.get("https://www.baidu.com/")
 
-""
+
 #找到搜索输入框并输入字符
-search = dir.find_element(By.ID,"kw")
-search = dir.find_element_by_id("kw")
-""
+#search = dir.find_element(By.ID,"kw")
+#search = dir.find_element_by_id("kw")
+
 
 #通过name查找输入框
 search = dir.find_element(By.NAME,"wd")
