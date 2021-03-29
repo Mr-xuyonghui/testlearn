@@ -2,9 +2,9 @@ import time
 from selenium.webdriver.support.ui import Select
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+from seleniumlearn import fileupload
 driver = webdriver.Chrome()
-driver.get("file:///Users/iyourcar/selenuimlearn/base/select.html")
+driver.get("F:testlearn\seleniumlearn\select.html")
 loc = (By.CLASS_NAME,"dowebok")
 sel = driver.find_element(*loc)
 SEL = Select(sel)
@@ -24,3 +24,8 @@ time.sleep(3)
 radio.click()
 
 driver.find_element_by_xpath("//input[@name=\"sex\" and @value=\"1\"]").click()
+
+
+#文件上传
+driver.find_element_by_id("loadfile").click()
+fileupload.upload("F:\testlearn\seleniumlearn\三大切换.py")
