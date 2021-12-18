@@ -4,10 +4,8 @@ import unittest
 def setUpModule():
     print("setUpModule 每个模块执行前执行一次")
 
-
-def tearDownMoudle():
+def tearDownModule():
     print("tearDownMoudle 每个模块执行后执行一次")
-
 
 class Test_fixture(unittest.TestCase):
 
