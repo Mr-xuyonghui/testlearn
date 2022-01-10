@@ -1,4 +1,5 @@
 import requests
+
 """
 微博个人主页通过ajax加载数据
 """
@@ -8,19 +9,19 @@ header = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36",
     "referer": "https://weibo.com/u/2118872917"
 }
-url= "https://weibo.com/ajax/statuses/mymblog"
-param={
+url = "https://weibo.com/ajax/statuses/mymblog"
+param = {
     "uid": 2118872917,
     "page": 2,
     "feature": 0
 }
-#初始化RequestsCookieJar对象
-jar =requests.cookies.RequestsCookieJar()
+# 初始化RequestsCookieJar对象
+jar = requests.cookies.RequestsCookieJar()
 c_l = cookie.split(";")
 for c in c_l:
-    key,value = c.split("=",1)
-    #通过RequestsCookieJar对象set()设置cookies
-    jar.set(key,value)
-re= requests.get(url,params=param,headers=header,cookies=jar)
+    key, value = c.split("=", 1)
+    # 通过RequestsCookieJar对象set()设置cookies
+    jar.set(key, value)
+re = requests.get(url, params=param, headers=header, cookies=jar)
 print(re.status_code)
 print(re.json()["data"]["list"])

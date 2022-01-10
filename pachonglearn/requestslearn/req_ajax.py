@@ -13,7 +13,6 @@ param={
     "page": 2,
     "feature": 0
 }
-
 re= requests.get(url,params=param,headers=header)
 print(re.status_code)
 print(re.json()["data"]["list"])
