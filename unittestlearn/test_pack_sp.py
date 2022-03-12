@@ -1,7 +1,6 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
-from beforetest import *
+import unittest
 from ddt import ddt,data,unpack
+from unittestlearn.beforetest import Test_ready
 
 @ddt
 class Test_zhihuLogin(Test_ready):
@@ -11,7 +10,8 @@ class Test_zhihuLogin(Test_ready):
     def test01_login(self,id,name,pwd,result):
         '''验证知乎登陆N种情况'''
         #切换到密码登陆
-        self.driver.find_element_by_xpath('//*[@id="root"]/div/main/div/div/div/div[1]/div/form/div[1]/div[2]').click()
+        #self.driver.find_element_by_xpath('//*[@id="root"]/div/main/div/div/div/div[1]/div/form/div[1]/div[2]').click()
+        self.driver.find_element_by_class_name('div.SignFlow-tab')[1].click()
         #通过name来查找元素
         self.driver.find_element_by_name('username').send_keys(name)
         self.driver.find_element_by_name('password').send_keys(pwd)
