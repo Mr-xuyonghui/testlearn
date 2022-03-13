@@ -16,4 +16,4 @@ class Test_01():
 
 
 if __name__ == "__main__":
-    pytest.main(['-s'])
+    pytest.main(['-s','-m L1 or L2'])
