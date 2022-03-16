@@ -3,6 +3,7 @@ import pytest
 
 @pytest.fixture(params=[1, 2, 3],ids=['test1','test2','test3'])
 def myfix(request):
+    print("\n the param are {}".format(request.param))
     return request.param
 
 
@@ -18,4 +19,4 @@ def test_fix_1():
 
 
 if __name__ == '__main__':
-    pytest.main(['-s','-k', 'fixture_2','-q'])
+    pytest.main(['-s','-k', 'fixture_2','-v'])
