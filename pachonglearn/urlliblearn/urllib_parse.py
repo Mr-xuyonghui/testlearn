@@ -20,7 +20,7 @@ print("通过属性名称获取协议类型result.scheme:", result.scheme)
 # 通过索引获取值
 print("通过索引获取域名result[1]：", result[1])
 
-"""使用URLsplit解析url"""
+"""使用URLsplit解析url，忽略param，并入和path一起"""
 result = urllib.parse.urlsplit(url)
 print("urlsplit返回结果类型：", result)
 print(result)

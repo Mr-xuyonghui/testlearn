@@ -10,7 +10,7 @@ try:
 except error.URLError as e:
     print(e.reason)
 
-"""捕获httperror"""
+"""捕获httperror，httperror是urlerror的子类，先抓子类再抓弗雷"""
 try:
     urllib.request.urlopen('http://www.i.htm')
 except error.HTTPError as e:
