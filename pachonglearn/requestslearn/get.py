@@ -18,3 +18,7 @@ print("请求头所有信息：",r.request.headers)
 print("请求头信息Accept：",r.request.headers["Accept"])
 #获取请求头部cookies
 print("请求头cookies：",r.request._cookies)
+#获取url
+print("请求url：",r.url)
+#获取请求历史
+print("请求历史：",r.history)
