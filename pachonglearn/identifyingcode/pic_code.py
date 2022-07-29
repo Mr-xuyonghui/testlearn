@@ -22,7 +22,7 @@ for i in range(256):
     else:
         table.append(1)
 img = img.point(table, '1')
-img.show()
+#img.show()
 # 识别成字符串
 res = pytesseract.image_to_string(img)
 print(pytesseract.image_to_boxes(img))
